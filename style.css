@@ -694,14 +694,22 @@ section#discord {
 :: Video Section
 -------------------------- */
 
-.video-slider {
-    width: 50%;
+.video-slider-container {
+    aspect-ratio: 16/9;
     margin: auto;
-    padding: 10px;
+    padding: 0;
     height: 20em;
-    background: #444;
+    position: relative;
+    overflow: visible;
+}
+
+.video-slider {
+    aspect-ratio: 16/9;
     position: relative;
     overflow: hidden;
+    background: #444;
+    border-radius: 24px 24px 24px 0px;
+    border: 2px solid white;
 }
 .slide {
     position: absolute;
@@ -722,31 +730,25 @@ section#discord {
 }
 .slide-arrow{
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 45%;
-    width: 15%;
+    font-size: 36px;
+    top: calc(50% - 0.5em);
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
     cursor: pointer;
-    opacity: .2;
 }
-.slide-arrow:hover{
+.slide-arrow::before{
+    color: white;
+    opacity: .5;
+    transition: all .3s;
+}
+.slide-arrow:hover::before{
     opacity: 1;
+    color: red;
 }
-.slide-arrow:after{
-    content: "\003c";
-    text-align: center;
-    display: block;
-    height: 10%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 3em;
+.slide-arrow.left {
+    left: -10%;
 }
-.slide-arrow.right:after{
-    content: "\003e";
-}
-.slide-arrow.right{
-    left: auto;
-    right: 0;
+.slide-arrow.right {
+    right: -10%;
 }
