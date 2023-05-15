@@ -5,7 +5,7 @@
     if ($.fn.scrollUp) {
         $.scrollUp({
             scrollSpeed: 500,
-            scrollText: '<i class="ti-arrow-up"></i>'
+            scrollText: '<i class="ion-android-arrow-up"></i>'
         });
     }
 

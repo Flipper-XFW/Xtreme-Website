@@ -421,10 +421,6 @@ section#home>.container {
     color: #fff;
 }
 
-.single-icon {
-    margin-bottom: 25px;
-}
-
 .single-special>h4 {
     font-size: 22px;
     color: #d33;
@@ -468,6 +464,7 @@ section#home>.container {
     display: inline-block;
     float: left;
     margin-right: 10px;
+    margin-top: -9px;
 }
 
 .single-feature>h5 {
