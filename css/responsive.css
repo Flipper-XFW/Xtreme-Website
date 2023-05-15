@@ -12,7 +12,7 @@
         line-height: 36px;
         font-size: 14px;
     }
-    .hero-thumb {
+    .home-thumb {
         height: 40%;
         top: 30%;
         right: 50px;
@@ -47,16 +47,16 @@
         margin-top: 30px;
         text-align: left;
     }
-    .hero-heading > h2 {
+    .home-heading > h2 {
         font-size: 88px;
     }
-    .hero-thumb {
+    .home-thumb {
         height: 35%;
         top: 30%;
         right: 0;
         left: unset;
     }
-    .hero-heading {
+    .home-heading {
         margin-bottom: 70px;
     }
     .single-special {
@@ -121,16 +121,16 @@
     header {
         top: 0;
     }
-    .hero-text .cd-intro > p {
+    .home-text .cd-intro > p {
         font-size: 14px;
     }
-    .hero-heading > h2 {
+    .home-heading > h2 {
         font-size: 48px;
     }
-    section#hero > .container {
+    section#home > .container {
         padding-top: 50px;
     }
-    .hero-thumb {
+    .home-thumb {
         height: 35%;
         right: 0;
         top: 50%;
@@ -182,38 +182,38 @@
     .contact-from {
         margin-top: 30px;
     }
-    .hero-heading > h3 {
+    .home-heading > h3 {
         font-size: 252px;
         top: -105px;
         left: -1px;
     }
-    .hero-heading,
+    .home-heading,
     .single-cool-fact {
         margin-bottom: 50px;
     }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
-    .hero-heading > h3 {
+    .home-heading > h3 {
         font-size: 284px;
     }
-    .hero-heading > h2 {
+    .home-heading > h2 {
         font-size: 70px;
     }
-    .hero-thumb {
+    .home-thumb {
         /* width: 75%; */
         left: unset;
     }
-    .hero-heading {
+    .home-heading {
         margin-bottom: 50px;
     }
-    .hero-heading > h3 {
+    .home-heading > h3 {
         top: -139px;
     }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    .hero-heading > h3 {
+    .home-heading > h3 {
         font-size: 286px;
     }
 }

@@ -343,11 +343,11 @@ header.sticky .navbar {
 
 
 /* --------------------------
-:: Hero Section
+:: Home Section
 -------------------------- */
 
-section#hero {
-    background-image: url(img/bg-img/hero-bg.png);
+section#home {
+    background-image: url(img/bg-img/home-bg.png);
     height: 700px;
     position: relative;
     z-index: 1;
@@ -355,11 +355,11 @@ section#hero {
     background-size: cover;
 }
 
-section#hero>.container {
+section#home>.container {
     padding-top: 200px;
 }
 
-.hero-thumb {
+.home-thumb {
     height: 50%;
     position: absolute;
     top: 26%;
@@ -367,13 +367,13 @@ section#hero>.container {
     z-index: 9;
 }
 
-.hero-thumb img {
+.home-thumb img {
     height: auto;
     width: 100%;
     rotate: 8deg;
 }
 
-.hero-heading>h2 {
+.home-heading>h2 {
     font-size: 100px;
     color: #ffffff;
     font-weight: 700;
@@ -381,7 +381,7 @@ section#hero>.container {
     z-index: 3;
 }
 
-.hero-heading>h4 {
+.home-heading>h4 {
     color: #ffffff;
     font-size: 30px;
     font-weight: 700;
@@ -389,11 +389,11 @@ section#hero>.container {
     z-index: 3;
 }
 
-.hero-heading>p {
+.home-heading>p {
     color: #fff;
 }
 
-.hero-heading>h3 {
+.home-heading>h3 {
     font-size: 332px;
     position: absolute;
     top: -134px;
@@ -405,7 +405,7 @@ section#hero>.container {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
 }
 
-.hero-heading {
+.home-heading {
     margin-bottom: 100px;
 }
 
