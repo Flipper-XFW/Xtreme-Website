@@ -88,10 +88,6 @@
         line-height: 36px;
         font-size: 14px;
     }
-    section#testimonials .slick-slide.slick-current img {
-        width: 90px !important;
-        height: 90px !important;
-    }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -160,17 +156,6 @@
     }
     .app-download-btn {
         margin-bottom: 20px;
-    }
-    section#testimonials .client-description > p {
-        font-size: 20px;
-    }
-    section#testimonials .slick-slide img {
-        width: 60px !important;
-        height: 60px !important;
-    }
-    section#testimonials .slick-slide.slick-current img {
-        width: 70px !important;
-        height: 70px !important;
     }
     .discord-description > h2 {
         font-size: 32px;

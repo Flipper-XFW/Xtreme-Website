@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Montserrat:400,500,700');
 @import 'css/bootstrap.min.css';
 @import 'css/animate.css';
-@import 'css/slick.css';
 @import 'css/font-awesome.min.css';
 @import 'css/themify-icons.css';
 @import 'css/ionicons.min.css';
@@ -479,119 +478,6 @@ section#home>.container {
 
 .single-feature>p {
     margin-top: 15px;
-}
-
-/* --------------------------
-:: Testimonials Section
--------------------------- */
-
-section#testimonials .client-name>h5 {
-    color: #5b32b4;
-    font-size: 22px;
-    margin-top: 5px;
-}
-
-section#testimonials .star-icon>i {
-    font-size: 18px;
-    color: #f1b922;
-}
-
-section#testimonials .client-description>p {
-    max-width: 1010px;
-    margin: auto;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-section#testimonials .client>i {
-    font-size: 48px;
-    color: #897ceb;
-    margin-bottom: 30px;
-}
-
-section#testimonials .client-name>p {
-    color: #b5aec4;
-}
-
-section#testimonials .slick-dots {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-}
-
-section#testimonials .slick-dots li button {
-    width: 12px;
-    height: 12px;
-    text-indent: -999999999999999999999999px;
-    border: 3px solid #a49fba;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 5.5px;
-    outline: none;
-}
-
-section#testimonials .slick-dots li.slick-active button {
-    background-color: #fb397d;
-    border-color: #fb397d;
-}
-
-section#testimonials .slick-slide.client-thumbnail {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 129px;
-}
-
-
-section#testimonials .slick-slide img {
-    display: block;
-    width: 80px !important;
-    height: 80px !important;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-section#testimonials .slick-slide.slick-current img {
-    width: 100px !important;
-    height: 100px !important;
-}
-
-section#testimonials .slick-arrow {
-    position: absolute;
-    width: 30px;
-    background-color: #000;
-    height: 100%;
-    text-align: center;
-    font-size: 24px;
-    color: #b5aec4;
-    display: block;
-    line-height: 550%;
-    left: 0;
-    z-index: 90;
-    cursor: pointer;
-}
-
-section#testimonials .slick-arrow.fa-angle-right {
-    left: auto;
-    right: 0;
-    top: 0;
 }
 
 /* --------------------------
