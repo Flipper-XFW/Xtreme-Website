@@ -64,7 +64,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import { fetchVersions, fetchFirmware, updater_share } from '../util/util'
+import { fetchVersions, fetchFirmware } from '../util/util'
 import ProgressBar from './ProgressBar.vue'
 import semver from 'semver'
 import asyncSleep from 'simple-async-sleep'
@@ -114,11 +114,7 @@ export default defineComponent({
       const changelogElem = document.getElementById('changelog')
       if (!version.changelog) {
         changelogElem.innerHTML = '<br>Loading changelog...'
-        const res = await fetch(version.changelogUrl, {
-          headers: {
-            Authorization: `Basic ${updater_share}`
-          }
-        })
+        const res = await fetch(version.changelogUrl)
         let changelog = await res.text()
         changelog = changelog.replaceAll(/^( *)[-*] (.*?)\n/gm, (match, g1, g2, offset, string, groups) => `<li style="padding-left: ${(g1 ? g1.length * 10 : 0) + 10}px">${g2}</li>`)
         for (let i = 5; i > 0; i--) {

@@ -3,8 +3,8 @@ import pako from 'pako'
 
 const cloud = 'https://cloud.cynthialabs.net'
 const webdav = '/public.php/webdav/'
-const updater_share = btoa("fWQpJpwgKFeHxwd:")
-const packs_share = btoa("Qb8Dto32sw8yP8X:")
+const updaterShare = 'fWQpJpwgKFeHxwd'
+const packsShare = 'Qb8Dto32sw8yP8X'
 
 class Operation {
   // eslint-disable-next-line
@@ -34,7 +34,7 @@ async function fetchVersions (target) {
   const response = await fetch(`${cloud}${webdav}`, {
     method: 'PROPFIND',
     headers: {
-      Authorization: `Basic ${updater_share}`
+      Authorization: `Basic ${btoa(updaterShare + ':')}`
     }
   })
   if (response.status >= 400) {
@@ -48,15 +48,15 @@ async function fetchVersions (target) {
     const path = file.getElementsByTagName('d:href')[0].textContent.trim()
     if (!(path.startsWith(webdav) && path.endsWith('.tgz'))) continue
     const version = path.slice(webdav.length, -'.tgz'.length)
-    const url = `${cloud}${webdav}${version}.tgz`
+    const url = `${cloud}/s/${updaterShare}/download?path=/&files=${version}`
     const date = version.split('_')[1]
     versions[version] = {
       value: version,
       label: version.split('_')[0],
       date: `${date.slice(0, 2)}-${date.slice(2, 4)}-${date.slice(4)}`,
-      url: url,
+      url: url + '.tgz',
       changelog: null,
-      changelogUrl: `${url.slice(0, -'.tgz'.length)}.md`,
+      changelogUrl: url + '.md',
       files: [{
         url: url,
         target: target,
@@ -68,11 +68,7 @@ async function fetchVersions (target) {
 }
 
 async function fetchFirmware (url) {
-  const buffer = await fetch(url, {
-    headers: {
-      Authorization: `Basic ${updater_share}`
-    }
-  })
+  const buffer = await fetch(url)
     .then(async response => {
       if (response.status >= 400) {
         throw new Error('Failed to fetch resources (' + response.status + ')')
@@ -99,8 +95,6 @@ function bytesToSize (bytes) {
 
 export {
   Operation,
-  updater_share,
-  packs_share,
   fetchVersions,
   fetchFirmware,
   unpack,
