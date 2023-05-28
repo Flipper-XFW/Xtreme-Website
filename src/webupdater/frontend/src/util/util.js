@@ -1,6 +1,11 @@
 import { untar } from '../untar/untar.js'
 import pako from 'pako'
 
+const cloud = 'https://cloud.cynthialabs.net'
+const webdav = '/public.php/webdav/'
+const updater_share = btoa("fWQpJpwgKFeHxwd:")
+const packs_share = btoa("Qb8Dto32sw8yP8X:")
+
 class Operation {
   // eslint-disable-next-line
   constructor() {
@@ -26,13 +31,10 @@ class Operation {
 }
 
 async function fetchVersions (target) {
-  const cloud = 'https://cloud.cynthialabs.net'
-  const webdav = '/public.php/webdav/'
-
   const response = await fetch(`${cloud}${webdav}`, {
     method: 'PROPFIND',
     headers: {
-      Authorization: 'Basic ZldRcEpwd2dLRmVIeHdkOg=='
+      Authorization: `Basic ${updater_share}`
     }
   })
   if (response.status >= 400) {
@@ -68,7 +70,7 @@ async function fetchVersions (target) {
 async function fetchFirmware (url) {
   const buffer = await fetch(url, {
     headers: {
-      Authorization: 'Basic ZldRcEpwd2dLRmVIeHdkOg=='
+      Authorization: `Basic ${updater_share}`
     }
   })
     .then(async response => {
@@ -97,6 +99,8 @@ function bytesToSize (bytes) {
 
 export {
   Operation,
+  updater_share,
+  packs_share,
   fetchVersions,
   fetchFirmware,
   unpack,

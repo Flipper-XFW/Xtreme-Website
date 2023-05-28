@@ -64,7 +64,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import { fetchVersions, fetchFirmware } from '../util/util'
+import { fetchVersions, fetchFirmware, updater_share } from '../util/util'
 import ProgressBar from './ProgressBar.vue'
 import semver from 'semver'
 import asyncSleep from 'simple-async-sleep'
@@ -116,7 +116,7 @@ export default defineComponent({
         changelogElem.innerHTML = '<br>Loading changelog...'
         const res = await fetch(version.changelogUrl, {
           headers: {
-            Authorization: 'Basic ZldRcEpwd2dLRmVIeHdkOg=='
+            Authorization: `Basic ${updater_share}`
           }
         })
         let changelog = await res.text()
