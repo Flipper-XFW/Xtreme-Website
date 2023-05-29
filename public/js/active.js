@@ -42,8 +42,8 @@
 // :: Video Slideshow
 $(document).ready(function () {
     var pos = 0,
-        slides = $('.slide'),
-        numOfSlides = slides.length;
+    slides = $('.slide'),
+    numOfSlides = slides.length;
 
     function nextSlide() {
         // `[]` returns a vanilla DOM object from a jQuery object/collection
