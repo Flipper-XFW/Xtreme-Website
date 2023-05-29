@@ -69,9 +69,7 @@ function onYouTubeIframeAPIReady() {
         // Get the `.video` element inside each `.slide`
         var iframe = $(slide).find('.video')[0]
         // Create a new YT.Player from the iFrame, and store it on the `.slide` DOM object
-        slide.video = new YT.Player(iframe, {
-            host: "https://flipper-xtre.me"
-        })
+        slide.video = new YT.Player(iframe)
     })
 }
 
