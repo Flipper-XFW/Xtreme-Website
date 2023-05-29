@@ -243,6 +243,7 @@ export default defineComponent({
     },
 
     async start () {
+      if (!this.serialSupported) return
       this.flags.rpcActive = this.rpcActive
       if (!this.rpcActive) {
         setTimeout(() => {
@@ -252,18 +253,15 @@ export default defineComponent({
         }, 1000)
         await this.startRpc()
       }
+      navigator.serial.addEventListener('disconnect', e => {
+        this.flags.rpcActive = false
+        this.flags.rpcToggling = false
+        this.$emit('setRpcStatus', false)
+      })
     }
   },
 
   async mounted () {
-    if (this.connected && this.info !== null && this.info.storage_databases_present) {
-      await this.start()
-    }
-    navigator.serial.addEventListener('disconnect', e => {
-      this.flags.rpcActive = false
-      this.flags.rpcToggling = false
-      this.$emit('setRpcStatus', false)
-    })
     this.packs = await fetchPacks()
       .catch(error => {
         this.$emit('showNotif', {
@@ -277,6 +275,9 @@ export default defineComponent({
         })
         throw error
       })
+    if (this.connected && this.info !== null && this.info.storage_databases_present) {
+      await this.start()
+    }
   },
 
   async beforeUnmount () {

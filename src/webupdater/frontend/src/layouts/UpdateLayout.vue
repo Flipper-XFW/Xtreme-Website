@@ -40,7 +40,7 @@
           <p>
             Your browser doesn't support WebSerial API.
             For better experience we recommend using Chrome for desktop.<br />
-            <a href="https://caniuse.com/web-serial">Full list of supported browsers</a>
+            <a style="color: #d33" href="https://caniuse.com/web-serial">Full list of supported browsers</a>
           </p>
         </div>
       </q-page>
@@ -66,7 +66,7 @@ export default defineComponent({
       flipper: ref(flipper),
       info: ref(null),
       flags: ref({
-        serialSupported: true,
+        serialSupported: false,
         portSelectRequired: false,
         connected: false,
         rpcActive: false,
@@ -344,27 +344,25 @@ export default defineComponent({
 
   async mounted () {
     if ('serial' in navigator) {
+      this.flags.serialSupported = true
       await this.start()
       navigator.serial.addEventListener('disconnect', e => {
         this.autoReconnect()
       })
-    } else {
-      this.flags.serialSupported = false
-    }
-
-    navigator.serial.addEventListener('disconnect', (e) => {
-      if (!this.flags.updateInProgress) {
-        this.showNotif({
-          message: 'Flipper has been disconnected'
+      navigator.serial.addEventListener('disconnect', (e) => {
+        if (!this.flags.updateInProgress) {
+          this.showNotif({
+            message: 'Flipper has been disconnected'
+          })
+          this.flags.connected = false
+          this.flags.portSelectRequired = true
+        }
+        this.log({
+          level: 'info',
+          message: 'Main: Flipper has been disconnected'
         })
-        this.flags.connected = false
-        this.flags.portSelectRequired = true
-      }
-      this.log({
-        level: 'info',
-        message: 'Main: Flipper has been disconnected'
       })
-    })
+    }
 
     this.logger.setLevel('debug', true)
     const originalFactory = this.logger.methodFactory
