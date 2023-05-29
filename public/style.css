@@ -344,7 +344,7 @@ header.sticky .navbar {
 -------------------------- */
 
 section#home {
-    background-image: url(img/bg-img/xtreme_custom-firmware-background.png);
+    background-image: url(img/xtreme_custom-firmware-background.png);
     height: 700px;
     position: relative;
     z-index: 1;

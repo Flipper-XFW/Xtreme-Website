@@ -1,17 +1,17 @@
 
 const routes = [
   {
-    path: '/webupdaterframe',
-    component: () => import('layouts/MainLayout.vue'),
+    path: '/update-frame',
+    component: () => import('layouts/UpdateLayout.vue'),
     children: [
-      { path: '/webupdaterframe', component: () => import('pages/Device.vue') }
+      { path: '/update-frame', component: () => import('pages/Update.vue') }
     ]
   },
   {
-    path: '/assetpacksframe',
+    path: '/asset-packs-frame',
     component: () => import('layouts/PacksLayout.vue'),
     children: [
-      { path: '/assetpacksframe', component: () => import('pages/Packs.vue') }
+      { path: '/asset-packs-frame', component: () => import('pages/Packs.vue') }
     ]
   }
 ]

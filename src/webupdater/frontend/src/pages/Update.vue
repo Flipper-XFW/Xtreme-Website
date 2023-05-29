@@ -68,7 +68,7 @@ import asyncSleep from 'simple-async-sleep'
 import { bytesToSize } from '../util/util'
 
 export default defineComponent({
-  name: 'PageDevice',
+  name: 'PageUpdate',
 
   props: {
     flipper: Object,

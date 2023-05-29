@@ -58,7 +58,7 @@ import log from 'loglevel'
 let dismissNotif
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: 'UpdateLayout',
 
   setup () {
     const $q = useQuasar()
