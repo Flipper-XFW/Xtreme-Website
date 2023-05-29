@@ -1,5 +1,6 @@
 import { untar } from '../untar/untar.js'
 import pako from 'pako'
+import { unzipSync } from 'fflate'
 
 const cloud = 'https://cloud.cynthialabs.net'
 const webdav = '/public.php/webdav/'
@@ -28,6 +29,49 @@ class Operation {
       this.reject(event.error)
     }
   }
+}
+
+async function fetchPacks () {
+  const response = await fetch(`${cloud}${webdav}`, {
+    method: 'PROPFIND',
+    headers: {
+      Authorization: `Basic ${btoa(packsShare + ':')}`
+    }
+  })
+  if (response.status >= 400) {
+    throw new Error('Failed to fetch asset packs (' + response.status + ')')
+  }
+  const data = await response.text()
+
+  const res = (new DOMParser()).parseFromString(data, 'text/xml')
+  const packs = []
+  for (const file of res.getElementsByTagName('d:response')) {
+    const path = file.getElementsByTagName('d:href')[0].textContent.trim()
+    if (!(path.startsWith(webdav) && path.endsWith('.zip'))) continue
+    const [name, author] = decodeURI(path.slice(webdav.length, -'.zip'.length)).split('.')
+    const url = `${cloud}/s/${packsShare}/download?path=/&files=${name}.${author}`
+    packs.push({
+      name: name,
+      author: author,
+      description: '',
+      image: url + '.png',
+      download: url + '.zip'
+    })
+  }
+  return packs
+}
+
+async function fetchPack (url) {
+  const buffer = await fetch(url)
+    .then(async response => {
+      if (response.status >= 400) {
+        throw new Error('Failed to fetch resources (' + response.status + ')')
+      }
+      const buffer = await response.arrayBuffer()
+      return unzipSync(new Uint8Array(buffer))
+    })
+
+  return buffer
 }
 
 async function fetchVersions (target) {
@@ -95,6 +139,8 @@ function bytesToSize (bytes) {
 
 export {
   Operation,
+  fetchPacks,
+  fetchPack,
   fetchVersions,
   fetchFirmware,
   unpack,

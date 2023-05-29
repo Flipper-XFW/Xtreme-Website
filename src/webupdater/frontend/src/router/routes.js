@@ -6,6 +6,13 @@ const routes = [
     children: [
       { path: '/webupdaterframe', component: () => import('pages/Device.vue') }
     ]
+  },
+  {
+    path: '/assetpacksframe',
+    component: () => import('layouts/PacksLayout.vue'),
+    children: [
+      { path: '/assetpacksframe', component: () => import('pages/Packs.vue') }
+    ]
   }
 ]
 
