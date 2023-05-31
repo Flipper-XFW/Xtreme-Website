@@ -41,7 +41,7 @@ Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupd
     quasar build -m spa
     ```
 
-3. Then just copy the built files over into public & serve it with a simple http server for testing, and put behind apache2 / nginx for production.
+3. Then just copy the built files over into the `public` folder. Yes, thanks to their randomized naming scheme that is kind of annoying but its not too bad. Then just serve it with a simple http server for testing, and put behind apache2 / nginx for production.
 
     - Python http:
         ```console
