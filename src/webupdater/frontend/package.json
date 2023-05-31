@@ -1,9 +1,9 @@
 {
-  "name": "lab.flipper.net",
-  "version": "0.0.1",
-  "description": "Web platform for your Flipper",
-  "productName": "lab.flipper.net",
-  "author": "Slipn3r <61992469+Slipn3r@users.noreply.github.com>",
+  "name": "flipper-xtre.me",
+  "version": "1.0",
+  "description": "Web-updater and asset pack downloader for flipper-xtre.me",
+  "productName": "flipper-xtre.me",
+  "author": "ClaraCrazy | WillyJL",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
@@ -14,6 +14,7 @@
     "compile-protofiles": "npx pbjs -t static-module -w es6 --no-comments --lint \"eslint-disable block-scoped-var, id-length, no-control-regex, no-magic-numbers, no-prototype-builtins, no-redeclare, no-shadow, no-var, sort-vars, camelcase, default-case-last, no-mixed-operators\" -o src/flipper/protobuf/proto-compiled.js ./flipperzero-protobuf/*.proto && eslint --fix src/flipper/protobuf/proto-compiled.js"
   },
   "dependencies": {
+    "@quasar/cli"
     "@quasar/extras": "^1.14.0",
     "core-js": "^3.6.5",
     "fflate": "^0.8.0",
