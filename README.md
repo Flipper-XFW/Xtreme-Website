@@ -19,7 +19,7 @@ This project is structured into two folders:
 
 Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupdater & asset-packs page, as those use [Vue](https://github.com/vuejs/). In simple terms, Vue combines html and JS into a single file, allowing for a simpler build process of complex sites.
 
-1. To compile vue, you run first need to install all dependencies:
+1. To compile the webupdater & asset-packs page, you run first need to install all dependencies:
 
     - For fedora:
         ```console
