@@ -80,7 +80,7 @@ h6 {
 }
 
 img {
-    max-width: 100%;
+    max-width: 95%;
     max-height: 100%;
 }
 
@@ -314,7 +314,7 @@ header {
     transition-duration: 500ms;
 }
 
-/* stcicky css */
+/* sticky css */
 
 header.sticky {
     background-color: #0b0b0b;
@@ -354,6 +354,7 @@ section#home {
 
 section#home>.container {
     padding-top: 200px;
+	position: relative
 }
 
 .home-thumb {
@@ -562,6 +563,10 @@ section#discord {
     font-size: 24px;
 }
 
+.table .ion-help-circled {
+	color: orange;
+}
+
 .table .ion-close-circled {
     color: red;
 }
@@ -579,9 +584,10 @@ section#discord {
     aspect-ratio: 16/9;
     margin: auto;
     padding: 0;
-    height: 20em;
+    max-height: 20em;
     position: relative;
     overflow: visible;
+	max-width: 80%;
 }
 
 .video-slider {
