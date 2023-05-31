@@ -19,20 +19,30 @@ This project is structured into two folders:
 
 Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupdater & asset-packs page, as those use [Vue](https://github.com/vuejs/). In simple terms, Vue combines html and JS into a single file, allowing for a simpler build process of complex sites.
 
-To compile vue, you run first need to install all dependencies:
-```console
-dnf install tzdata npm
-```
+1. To compile vue, you run first need to install all dependencies:
 
-Then you can configure NPM:
-```console
-npm install -g @quasar/cli
-```
+    - For fedora:
+        ```console
+        dnf install tzdata npm
+        ```
+    - For Ubuntu:
+        ```console
+        apt install tzdata npm
+        ```
+    - For alpine:
+        ```console
+        apk install tzdata npm
+        ```
 
-And last but not least, run these commands in the `frontend` directory to build:
-```console
-npm i
-quasar build -m spa
-```
+2. To finally build, run these commands in the `frontend` directory:
+    ```console
+    npm i
+    quasar build -m spa
+    ```
 
-Then just serve it with a simple http server for testing, and put behind apache2 / nginx for production.
+3. Then just copy the built files over into public & serve it with a simple http server for testing, and put behind apache2 / nginx for production.
+
+    - Python http:
+        ```console
+        python -m http.server
+        ```
