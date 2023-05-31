@@ -37,6 +37,7 @@ Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupd
 2. To finally build, run these commands in the `frontend` directory:
     ```console
     npm i
+    # If there is any vulnerabilities ALWAYS run "npm audit fix". Dont be lazy!
     quasar build -m spa
     ```
 
