@@ -1,8 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-f408bd0227e7853f3a91f61e13d8825f7ef4fb38 refs/remotes/origin/dev
-a582c9baad45301bfec1580c692c4b84b05abd0f refs/remotes/origin/electron
-ddaeac5a60ba382bf707d70c490507acef39957f refs/remotes/origin/main
-5f6c55d01d719d6875ee4c5695b65c9f0a347be6 refs/remotes/origin/socketio
-5929d4c23dbb882d21b40f7e987251e015ec60e0 refs/tags/0.1.0
-a1fcbe1b98de607149f745238fbfac0996df1f57 refs/tags/0.1.1
-882283dceaab6c54773220ac2d0bac87d2400406 refs/tags/0.1.2
