@@ -17,3 +17,6 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+# Log files of my broken-af editor
+log.txt
