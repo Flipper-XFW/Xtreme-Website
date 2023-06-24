@@ -19,7 +19,7 @@ This project is structured into two folders:
 
 Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupdater & asset-packs page, as those use [Vue](https://github.com/vuejs/). In simple terms, Vue combines html and JS into a single file, allowing for a simpler build process of complex sites.
 
-1. To compile the webupdater & asset-packs page, you run first need to install all dependencies:
+1. To compile the webupdater & asset-packs page, you first need to install all dependencies:
 
     - For fedora:
         ```console
@@ -34,14 +34,14 @@ Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupd
         apk install tzdata npm
         ```
 
-2. To finally build, run these commands in the `frontend` directory:
+2. To then build, run these commands in the `frontend` directory:
     ```console
     npm i
     # If there is any vulnerabilities ALWAYS run "npm audit fix". Dont be lazy!
     quasar build -m spa
     ```
 
-3. Then just copy the built files over into the `public` folder. Yes, thanks to their randomized naming scheme that is kind of annoying but its not too bad. Then just serve it with a simple http server for testing, and put behind apache2 / nginx for production.
+3. Finally, just copy the built files over into the `public` folder. Yes, thanks to their randomized naming scheme that is kind of annoying but its not too bad. Then just serve it with a simple http server for testing, and put behind apache2 / nginx for production.
 
     - Python http:
         ```console
