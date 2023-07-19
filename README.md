@@ -6,12 +6,12 @@
 
 This project is structured into two folders:
 
-1. [Public](https://github.com/ClaraCrazy/flipper-xtre.me/tree/main/public):
+1. [Public](https://github.com/Flipper-XFW/Xtreme-Website/tree/main/public):
 
     The `public` folder is what you see when visiting the website. Its the compiled files for the webupdater & asset packs, and all the other things like HTML, CSS, JS.
 
 
-2. [src](https://github.com/ClaraCrazy/flipper-xtre.me/tree/main/src):
+2. [src](https://github.com/Flipper-XFW/Xtreme-Website/tree/main/src):
 
     The `src` folder contains the raw source-code for the webupdater & asset pack page. This is intended for developers only.
    
