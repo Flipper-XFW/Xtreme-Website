@@ -121,7 +121,7 @@ export default defineComponent({
 
         const fileList = Object.entries(files).sort((a, b) => (a[0] > b[0]) ? +1 : -1)
         let path = '/ext'
-        let mkdir = 'dolphin_custom/' + fileList[0][0]
+        let mkdir = 'asset_packs/' + fileList[0][0]
         if (mkdir.endsWith('/')) {
           mkdir = mkdir.slice(0, -1)
         }
@@ -140,7 +140,7 @@ export default defineComponent({
         let i = 0
         for (const [name, file] of fileList) {
           if (file.byteLength === 0) {
-            path = '/ext/dolphin_custom/' + name
+            path = '/ext/asset_packs/' + name
             if (name.endsWith('/')) {
               path = path.slice(0, -1)
             }
@@ -153,12 +153,12 @@ export default defineComponent({
                 })
               })
           } else {
-            await this.flipper.commands.storage.write('/ext/dolphin_custom/' + name, file.buffer)
+            await this.flipper.commands.storage.write('/ext/asset_packs/' + name, file.buffer)
               .catch(error => this.rpcErrorHandler(error, 'storage.write'))
               .finally(() => {
                 this.$emit('log', {
                   level: 'debug',
-                  message: 'Packs: storage.write: /ext/dolphin_custom/' + name
+                  message: 'Packs: storage.write: /ext/asset_packs/' + name
                 })
               })
           }
