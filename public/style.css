@@ -400,6 +400,7 @@ section#home>.container {
     z-index: -1;
     color: #fff;
     opacity: .1;
+    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
 }
 

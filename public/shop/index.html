@@ -21,7 +21,7 @@
     <link href="/css/responsive.css" rel="stylesheet">
 </head>
 
-<body style="width: 100vw; height: 100vh; overflow: hidden;">
+<body>
 
     <header class="animated" style="position: relative; height: 110px;">
         <div class="container-fluid">
@@ -38,8 +38,8 @@
                                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                                     <li class="nav-item"><a class="nav-link" href="https://discord.gg/flipper-xtreme">Discord</a></li>
                                     <li class="nav-item"><a class="nav-link" href="/asset-packs">Asset Packs</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/shop">Merch</a></li>
                                     <!-- <li class="nav-item"><a class="nav-link" href="#">Pack Builder</a></li> -->
+                                    <li class="nav-item"><a class="nav-link" href="/shop">Merch</a></li>
                                     <li class="nav-item"><a class="nav-link" href="https://patreon.com/CynthiaLabs">Support Us</a></li>
                                     <li class="nav-item"><a class="nav-link" href="https://github.com/Flipper-XFW">GitHub</a></li>
                                 </ul>
@@ -56,7 +56,22 @@
         </div>
     </header>
 
-    <iframe src="/asset-packs-frame" frameborder="0" allow="serial" width="100%" style="height: calc(100% - 110px);"></iframe>
+    <div id="myShop">
+        <a href="https://Flipper-XFW.myspreadshop.com">Flipper-XFW</a>
+    </div>
+    
+    <script>
+        var spread_shop_config = {
+            shopName: 'Flipper-XFW',
+            locale: 'us_US',
+            prefix: 'https://Flipper-XFW.myspreadshop.com',
+            baseId: 'myShop'
+        };
+    </script>
+    
+    <script type="text/javascript"
+            src="https://Flipper-XFW.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js">
+    </script>
 
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/popper.min.js"></script>
