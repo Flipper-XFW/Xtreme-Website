@@ -676,22 +676,3 @@ section#discord {
 .slide-arrow.right {
     right: -10%;
 }
-
-/* --------------------------
-:: Shop section
--------------------------- */
-
-.spreadshop-iframe {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(0, 0, 0);
-    overflow: hidden;
-}
-
-.spreadshop {
-    display: flex;
-    flex-grow: 1;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
