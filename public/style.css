@@ -238,6 +238,34 @@ p {
     vertical-align: middle;
 }
 
+::-webkit-scrollbar {
+    background: #0000;
+    width: 16px
+}
+
+::-webkit-scrollbar-track {
+    background: #0000;
+    border: 3px solid #0000;
+    margin: 14px 0;
+    overflow: auto
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    background-clip: padding-box;
+    border: 6px solid #0000;
+    border-radius: 16px;
+    min-height: 24px;
+    overflow: auto;
+    padding: 50px;
+    -webkit-transition: height .2s ease-in-out;
+    transition: height .2s ease-in-out
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb
+}
+
 /* --------------------------
 :: Header Bar
 -------------------------- */
@@ -599,6 +627,7 @@ section#discord {
     border-radius: 24px 24px 24px 0px;
     border: 2px solid white;
 }
+
 .slide {
     position: absolute;
     top: 0;
@@ -608,15 +637,18 @@ section#discord {
     text-align: center;
     overflow: hidden;
 }
-.slide:first-child{
+
+.slide:first-child {
     left: 0;
 }
-.video{
+
+.video {
     height: 100%;
     width: 100%;
-    border:0;
+    border: 0;
 }
-.slide-arrow{
+
+.slide-arrow {
     position: absolute;
     font-size: 36px;
     top: calc(50% - 0.5em);
@@ -625,18 +657,41 @@ section#discord {
     z-index: 1;
     cursor: pointer;
 }
-.slide-arrow::before{
+
+.slide-arrow::before {
     color: white;
     opacity: .5;
     transition: all .3s;
 }
-.slide-arrow:hover::before{
+
+.slide-arrow:hover::before {
     opacity: 1;
     color: red;
 }
+
 .slide-arrow.left {
     left: -10%;
 }
+
 .slide-arrow.right {
     right: -10%;
+}
+
+/* --------------------------
+:: Shop section
+-------------------------- */
+
+.spreadshop-iframe {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.spreadshop {
+    display: flex;
+    flex-grow: 1;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
