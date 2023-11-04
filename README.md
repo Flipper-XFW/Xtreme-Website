@@ -1,4 +1,4 @@
-<h1 align="center">Source-code for our website <a href="https://flipper-xtre.me">flipper-xtre.me</a></h1>
+<h1 align="center">Source-code for our website <a href="https://flipper-xtre.me" target="_blank">flipper-xtre.me</a></h1>
 
 <img src="https://user-images.githubusercontent.com/55334727/236639627-1c2d00f7-7169-449d-84bd-9d0bb8fd9c6c.png">
 
