@@ -53,12 +53,12 @@ Well, the core part is just HTML. Nothing fancy. Whats complicated is the webupd
 -----
 
 ## ❤️ Support
-If you like what you're seeing, **please consider donating to us**. We won't ever put this behind a paywall, but we'd still appreciate a few bucks!
+If you like what you're seeing, **please consider donating to us**. This will allow us to dedicate more time to the project(s) you love!
 
-- **[Patreon](https://patreon.com/CrazyCo)**: ❤️ Account needed, subscription with perks across my entire org.
-- **[Wire-transfer](https://bunq.me/ClaraK)**: No account needed, one-time
-- **[Paypal](https://paypal.me/ClaraCrazy)**: Account needed, one-time
-- **[ko-fi](https://ko-fi.com/cynthialabs)**: No account needed, one-time
-- **Monero**: `41kyWeeoVdK4quzQ4M9ikVGs6tCQCLfdx8jLExTNsAu2SF1QAyDqRdjfGM6EL8L9NpXwt89HJeAoGf1aoArk7nDr4AMMV4T`
+- **[Patreon](https://patreon.com/crazyco) (Fee: 8%\*)**: ❤️ Account needed, subscription with perks
+- **[ko-fi](https://ko-fi.com/crazyco) (Fee: 2%\*)**: No account needed, subscription or one-time donation
+- **[Wire-transfer](https://bunq.me/ClaraK) (Fee: 0%\*)**: No account needed, one-time donation
+- **[Paypal](https://paypal.me/ClaraCrazy) (Fee: 2%\*)**: Account needed, one-time donation
+- **Monero (Fee: ~2.5%\*)**: `41kyWeeoVdK4quzQ4M9ikVGs6tCQCLfdx8jLExTNsAu2SF1QAyDqRdjfGM6EL8L9NpXwt89HJeAoGf1aoArk7nDr4AMMV4T`<br>
 
 **Thanks for all your support <3**
